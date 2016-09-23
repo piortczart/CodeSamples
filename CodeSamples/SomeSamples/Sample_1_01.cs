@@ -3,7 +3,7 @@ using System.Threading;
 
 namespace SomeSamples
 {
-    public static class Sample_1_1
+    public static class Sample_1_01
     {
         public static void ThreadMethod()
         {

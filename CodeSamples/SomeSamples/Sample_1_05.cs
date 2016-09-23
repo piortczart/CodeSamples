@@ -3,7 +3,7 @@ using System.Threading;
 
 namespace SomeSamples
 {
-    public static class Sample_1_5
+    public static class Sample_1_05
     {
         [ThreadStatic]
         public static int Number;

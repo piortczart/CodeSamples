@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SomeSamples
 {
-    public static class Sample_1_9
+    public static class Sample_1_09
     {
         public static void Do()
         {

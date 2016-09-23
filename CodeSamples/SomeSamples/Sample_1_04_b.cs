@@ -3,7 +3,7 @@ using System.Threading;
 
 namespace SomeSamples
 {
-    public static class Sample_1_4_b
+    public static class Sample_1_04_b
     {
         /// http://yoda.arachsys.com/csharp/threads/shutdown.shtml
         public static void Do()

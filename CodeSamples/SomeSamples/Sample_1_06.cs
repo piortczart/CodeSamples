@@ -3,7 +3,7 @@ using System.Threading;
 
 namespace SomeSamples
 {
-    public static class Sample_1_6
+    public static class Sample_1_06
     {
         public static ThreadLocal<int> _field =
             new ThreadLocal<int>(() => { return Thread.CurrentThread.ManagedThreadId; });
