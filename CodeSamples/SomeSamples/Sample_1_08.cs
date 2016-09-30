@@ -18,7 +18,7 @@ namespace SomeSamples
                 }
             });
 
-            //t.Wait();
+            t.Wait();
 
             Console.WriteLine("Done!");
             Console.ReadKey();

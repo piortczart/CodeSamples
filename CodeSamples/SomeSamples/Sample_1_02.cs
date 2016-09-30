@@ -17,8 +17,8 @@ namespace SomeSamples
         public static void Do()
         {
             Thread t = new Thread(new ThreadStart(ThreadMethod));
-            t.IsBackground = true;
-            //t.IsBackground = false;
+            //t.IsBackground = true;
+            t.IsBackground = false;
             t.Start();
         }
     }

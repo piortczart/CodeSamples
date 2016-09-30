@@ -16,10 +16,11 @@ namespace SomeSamples
                     Console.Write("*");
                     Thread.Sleep(TimeSpan.FromMilliseconds(10));
                 }
-                Console.WriteLine("");
+                Console.WriteLine(Thread.CurrentThread.ManagedThreadId);
                 return 1;
             }).ContinueWith((i) =>
             {
+                Console.WriteLine(Thread.CurrentThread.ManagedThreadId);
                 return i.Result + 5;
             });
 

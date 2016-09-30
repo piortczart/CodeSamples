@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SomeSamples
@@ -10,8 +11,11 @@ namespace SomeSamples
             Task<int[]> parent = Task.Run(() =>
             {
                 var results = new int[3];
-                new Task(() => results[0] = 0, TaskCreationOptions.AttachedToParent).Start();
-                new Task(() => results[1] = 1, TaskCreationOptions.AttachedToParent).Start();
+                new Task(() => results[0] = -1, TaskCreationOptions.AttachedToParent).Start();
+                new Task(() =>
+                {
+                    Thread.Sleep(1000); results[1] = 1;
+                }, TaskCreationOptions.AttachedToParent).Start();
                 new Task(() => results[2] = 2, TaskCreationOptions.AttachedToParent).Start();
                 return results;
             });

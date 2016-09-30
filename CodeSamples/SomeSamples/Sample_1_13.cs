@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SomeSamples
@@ -13,9 +14,12 @@ namespace SomeSamples
 
                 TaskFactory tf = new TaskFactory(TaskCreationOptions.AttachedToParent, TaskContinuationOptions.ExecuteSynchronously);
 
-                tf.StartNew(() => results[0] = 0, TaskCreationOptions.AttachedToParent);
-                tf.StartNew(() => results[1] = 1, TaskCreationOptions.AttachedToParent);
-                tf.StartNew(() => results[2] = 2, TaskCreationOptions.AttachedToParent);
+                tf.StartNew(() => results[0] = -1);
+                tf.StartNew(() =>
+                {
+                    Thread.Sleep(1000);
+                    results[1] = 1; });
+                tf.StartNew(() => results[2] = 2);
                 return results;
             });
 

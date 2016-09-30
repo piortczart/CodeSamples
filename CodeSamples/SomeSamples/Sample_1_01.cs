@@ -10,7 +10,7 @@ namespace SomeSamples
             for (int i = 0; i < 10; i++)
             {
                 Console.WriteLine("ThreadProc:{0}", i);
-                Thread.Sleep(0);
+                //Thread.Sleep(0);
             }
         }
 
@@ -21,7 +21,7 @@ namespace SomeSamples
             for (int i = 0; i < 4; i++)
             {
                 Console.WriteLine("Mainthread: Dosomework.");
-                Thread.Sleep(0);
+                //Thread.Sleep(0);
             }
             t.Join();
 

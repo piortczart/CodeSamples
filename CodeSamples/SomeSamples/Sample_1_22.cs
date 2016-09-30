@@ -15,8 +15,9 @@ namespace SomeSamples
 
             Console.WriteLine("PLINQ: {0}",  sw.Elapsed);
 
-            foreach (int i in parallelResult) Console.WriteLine(i);
+            //foreach (int i in parallelResult) Console.WriteLine(i);
 
+            sw.Restart();
             int[] regularResult = numbers.Where(i => i % 2 == 0).ToArray();
 
             Console.WriteLine("LINQ: {0}", sw.Elapsed);

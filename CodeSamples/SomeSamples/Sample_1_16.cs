@@ -12,11 +12,12 @@ namespace SomeSamples
         {
             var stopwatch = Stopwatch.StartNew();
 
-            Parallel.For(0, 10, i => { Thread.Sleep(1000); });
+            Parallel.ForEach(Enumerable.Range(0, 8), i => { Thread.Sleep(1000); });
 
             Console.WriteLine("First: " + stopwatch.Elapsed);
+            stopwatch.Restart();
 
-            Parallel.ForEach(Enumerable.Range(0, 10), i => { Thread.Sleep(1000); });
+            Parallel.For(0, 8, i => { Thread.Sleep(1000); });
 
             Console.WriteLine("Second: " + stopwatch.Elapsed);
 
