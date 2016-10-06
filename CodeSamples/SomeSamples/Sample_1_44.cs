@@ -10,7 +10,7 @@ namespace SomeSamples
         {
             var cancellationTokenSource = new CancellationTokenSource();
             CancellationToken token = cancellationTokenSource.Token;
-            var task = Task.Run(() =>
+            var task = Task.Factory.StartNew(() =>
             {
                 while (!token.IsCancellationRequested)
                 {
@@ -18,6 +18,7 @@ namespace SomeSamples
                     Thread.Sleep(1000);
                 }
 
+                // Removing this line prevents the continuation from happenning.
                 token.ThrowIfCancellationRequested();
             }, token)
                 .ContinueWith(t =>

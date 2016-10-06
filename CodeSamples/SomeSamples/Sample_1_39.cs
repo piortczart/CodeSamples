@@ -2,6 +2,9 @@
 
 namespace SomeSamples
 {
+    /// <summary>
+    /// SKIP!
+    /// </summary>
     public class Sample_1_39
     {
         private static int _flag = 0;

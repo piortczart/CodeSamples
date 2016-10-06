@@ -4,6 +4,9 @@ using System.Linq;
 
 namespace SomeSamples
 {
+    /// <summary>
+    /// PLinq - AggregateException.
+    /// </summary>
     public class Sample_1_27
     {
         public static void Do()
@@ -14,7 +17,8 @@ namespace SomeSamples
 
             try
             {
-                var parallelResult = numbers.AsParallel().Where(i => IsEven(i));
+                // It will fail at 0, but will continue a bit longer...
+                ParallelQuery<int> parallelResult = numbers.AsParallel().Where(i => IsEven(i));
                 parallelResult.ForAll(e => Console.WriteLine(e));
             }
             catch (AggregateException e)

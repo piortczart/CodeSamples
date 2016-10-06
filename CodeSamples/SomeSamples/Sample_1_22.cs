@@ -4,24 +4,59 @@ using System.Linq;
 
 namespace SomeSamples
 {
+    /// <summary>
+    /// Parallel Linq Vs Linq.
+    /// A good and a bad example.
+    /// </summary>
     public class Sample_1_22
     {
         public static void Do()
         {
             var sw = Stopwatch.StartNew();
 
-            var numbers = Enumerable.Range(0, 100000000);
-            int[] parallelResult = numbers.AsParallel().Where(i => i % 2 == 0).ToArray();
+            Func<int, long> goodOne = FindPrimeNumber;
+            Func<int, long> badOne = i => { return i % 2; };
+
+            Func<int, long> calculation = badOne; // CHANGE HERE.
+
+            var numbers = Enumerable.Range(0, 4000);
+            numbers.AsParallel().Select(calculation).ToArray();
 
             Console.WriteLine("PLINQ: {0}",  sw.Elapsed);
 
-            //foreach (int i in parallelResult) Console.WriteLine(i);
-
             sw.Restart();
-            int[] regularResult = numbers.Where(i => i % 2 == 0).ToArray();
+
+            numbers.Select(calculation).ToArray();
 
             Console.WriteLine("LINQ: {0}", sw.Elapsed);
             Console.ReadKey();
+        }
+
+        /// <summary>
+        /// Find nth prime. Taken from the interwebz.
+        /// </summary>
+        public static long FindPrimeNumber(int n)
+        {
+            int count = 0;
+            long a = 2;
+            while (count < n)
+            {
+                long b = 2;
+                int prime = 1;// to check if found a prime
+                while (b * b <= a)
+                {
+                    if (a % b == 0)
+                    {
+                        prime = 0;
+                        break;
+                    }
+                    b++;
+                }
+                if (prime > 0)
+                    count++;
+                a++;
+            }
+            return (--a);
         }
     }
 }

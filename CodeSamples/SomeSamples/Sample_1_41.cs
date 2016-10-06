@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 
 namespace SomeSamples
 {
+    /// <summary>
+    /// Making decisions based on a value shared by two threads...
+    /// </summary>
     public class Sample_1_41
     {
         static int value = 1;
@@ -15,7 +18,7 @@ namespace SomeSamples
                 if (value == 1)
                 {
                     // Removing the following line will change the output
-                    Thread.Sleep(1000);
+                    Thread.Sleep(500);
                     value = 2;
                 }
             });

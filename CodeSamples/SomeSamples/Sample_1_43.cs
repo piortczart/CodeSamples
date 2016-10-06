@@ -26,7 +26,7 @@ namespace SomeSamples
             cancellationTokenSource.Cancel();
 
             Console.WriteLine("Waiting...");
-            task.Wait();
+            task.Wait();    // Excepszyn here.
 
             Console.WriteLine("Uff...");
             Console.ReadKey();

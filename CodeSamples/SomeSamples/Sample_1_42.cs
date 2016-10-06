@@ -4,18 +4,21 @@ using System.Threading.Tasks;
 
 namespace SomeSamples
 {
+    /// <summary>
+    /// CancellationTokenSource
+    /// </summary>
     public class Sample_1_42
     {
         public static void Do()
         {
             var cancellationTokenSource = new CancellationTokenSource();
             CancellationToken token = cancellationTokenSource.Token;
-            var task = Task.Run(() =>
+            Task task = Task.Run(() =>
             {
                 while (!token.IsCancellationRequested)
                 {
                     Console.Write("*");
-                    Thread.Sleep(1000);
+                    Thread.Sleep(2000);
                 }
             }, token);
 
@@ -26,7 +29,7 @@ namespace SomeSamples
             Console.WriteLine("Waiting...");
             task.Wait();
 
-            Console.WriteLine("Uff...");
+            Console.WriteLine("Uff... Done.");
             Console.ReadKey();
         }
     }

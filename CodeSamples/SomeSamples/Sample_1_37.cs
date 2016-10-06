@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 
 namespace SomeSamples
 {
+    /// <summary>
+    /// Deadlock!
+    /// </summary>
     public class Sample_1_37
     {
         public static void Do()

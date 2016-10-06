@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 
 namespace SomeSamples
 {
+    /// <summary>
+    /// Sample async call.
+    /// </summary>
     public static class Sample_1_18
     {
         public static void Do()

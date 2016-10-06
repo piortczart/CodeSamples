@@ -4,13 +4,17 @@ using System.Linq;
 
 namespace SomeSamples
 {
+    /// <summary>
+    /// PLinq - order is not enforced by default.
+    /// </summary>
     public class Sample_1_23
     {
         public static void Do()
         {
             var sw = Stopwatch.StartNew();
 
-            var numbers = Enumerable.Range(0, 100);
+            Console.WriteLine("Unordered...");
+            var numbers = Enumerable.Range(0, 20);
             int[] parallelResult = numbers.AsParallel().Where(i => i % 2 == 0).ToArray();
             foreach (int i in parallelResult)
             {
@@ -19,7 +23,7 @@ namespace SomeSamples
 
             Console.ReadKey();
 
-            // Ordered.
+            Console.WriteLine("Oooooorder!");
             parallelResult = numbers.AsParallel().AsOrdered().Where(i => i % 2 == 0).ToArray();
             foreach (int i in parallelResult)
             {

@@ -4,7 +4,10 @@ using System.Threading.Tasks;
 
 namespace SomeSamples
 {
-    public class Sample_1_40
+    /// <summary>
+    /// SKIP!
+    /// </summary>
+     public class Sample_1_40
     {
         public static void Do()
         {

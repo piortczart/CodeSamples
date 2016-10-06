@@ -3,7 +3,10 @@ using System.Threading.Tasks;
 
 namespace SomeSamples
 {
-    public class Sample_1_36
+    /// <summary>
+    /// Synchronized access.
+    /// </summary>
+    public class Sample_1_36_a
     {
         private static int Good()
         {

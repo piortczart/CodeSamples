@@ -3,7 +3,10 @@ using System.Threading.Tasks;
 
 namespace SomeSamples
 {
-    public class Sample_1_35
+    /// <summary>
+    /// Unsynchronized access by two threads.
+    /// </summary>
+    public class Sample_1_35_a
     {
         private static int Bad()
         {
@@ -17,6 +20,7 @@ namespace SomeSamples
                 n--;
             up.Wait();
 
+            // n should be 0?
             return n;
         }
 

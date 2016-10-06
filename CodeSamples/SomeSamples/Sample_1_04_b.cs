@@ -13,7 +13,8 @@ namespace SomeSamples
             {
                 while (!stopped)
                 {
-                    Console.WriteLine("Running..."); Thread.Sleep(1000);
+                    Console.WriteLine("Running...");
+                    Thread.Sleep(1000);
                 }
             }));
             t.Start();

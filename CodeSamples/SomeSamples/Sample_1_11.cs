@@ -7,33 +7,39 @@ namespace SomeSamples
 {
     public static class Sample_1_11
     {
+        /// <summary>
+        /// OnFaulted continuation.
+        /// Show what happens when line 37 gets uncommented.
+        /// </summary>
         public static void Do()
         {
-            Task<int> t = Task.Run(() =>
+            Task<int> task = Task.Run(() =>
             {
                 foreach (int i in Enumerable.Range(1, 50))
                 {
                     Console.Write("*");
                     Thread.Sleep(TimeSpan.FromMilliseconds(10));
-                   // throw new Exception();
+                    if (i > 20)
+                    {
+                        Console.WriteLine("");
+                        throw new Exception("That's too much.");
+                    }
                 }
-                Console.WriteLine("");
                 return 1;
             });
 
-            t.ContinueWith((i) =>
+            // Notice the new variable.
+            Task<int> continuation = task.ContinueWith((i) =>
             {
-                return i.Result + 1;
-            }, TaskContinuationOptions.OnlyOnRanToCompletion);
+                Console.WriteLine("Last task threw an exception. Type: {0}, inner message: {1}",
+                    i.Exception.GetType().FullName, i.Exception.InnerException.Message);
 
-            t.ContinueWith((i) =>
-            {
-                // Calling i.Result will throw the exception.
-                //var x = i.Result;
+                // Calling i.Result will throw the exception here.
+                //int x = i.Result;
                 return 5;
             }, TaskContinuationOptions.OnlyOnFaulted);
 
-            Console.WriteLine("Result: " + t.Result);
+            Console.WriteLine("Final result: " + continuation.Result);
 
             Console.ReadKey();
         }

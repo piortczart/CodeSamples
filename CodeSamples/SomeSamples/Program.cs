@@ -4,8 +4,36 @@
     {
         static void Main(string[] args)
         {
-            Sample_1_11.Do();
-            //Sample_1_2.Do();
+            //Sample_1_10.Do();
+            //Sample_1_11.Do();
+            //Sample_1_12.Do();
+            //Sample_1_13.Do();
+            //Sample_1_14_b.Do();
+            //Sample_1_15.Do();
+            //Sample_1_16.Do();
+            //Sample_1_17.Do();
+            //Sample_1_18.Do();
+            //Sample_1_19.Do();
+            //Sample_1_22.Do();
+            //Sample_1_23.Do();
+            //Sample_1_27.Do();
+            //Sample_1_28.Do();
+            //Sample_1_29_b.Do();
+            //Sample_1_31_a.Do();
+            //Sample_1_31_b.Do();
+            //Sample_1_32.Do();
+            //Sample_1_33.Do();
+            //Sample_1_34.Do();
+            //Sample_1_35_a.Do();
+            //Sample_1_35_b.Do();
+            //Sample_1_36_a.Do();
+            //Sample_1_36_b.Do();
+            //Sample_1_37.Do();
+            //Sample_1_41.Do();
+            //Sample_1_42.Do();
+            //Sample_1_43.Do();
+            //Sample_1_44.Do();
+            Sample_1_45.Do();
         }
     }
 }

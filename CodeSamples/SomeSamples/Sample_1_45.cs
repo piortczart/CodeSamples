@@ -10,16 +10,20 @@ namespace SomeSamples
         {
             Task longRunning = Task.Run(() =>
             {
-                Thread.Sleep(10000);
+                Thread.Sleep(5000);
             });
+
+            Console.WriteLine("Waiting a bit..");
             int index = Task.WaitAny(new[] { longRunning }, 1000);
             if (index == -1)
+            {
                 Console.WriteLine("Task timed out");
+            }
 
-            Console.WriteLine("Waiting...");
-            longRunning.Wait();
+            Console.WriteLine("Waiting 4 evah!");
+            index = Task.WaitAny(new[] { longRunning });
 
-            Console.WriteLine("Uff.");
+            Console.WriteLine("Uff. Done, index: {0}", index);
             Console.ReadKey();
         }
     }

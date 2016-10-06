@@ -8,15 +8,20 @@ namespace SomeSamples
     {
         public static void Do()
         {
-
             Console.ReadKey();
         }
 
+        /// <summary>
+        /// This actually wastes a thread. Non-async stuff packed in a task.
+        /// </summary>
         public Task SleepAsyncA(int millisecondsTimeout)
         {
             return Task.Run(() => Thread.Sleep(millisecondsTimeout));
         }
 
+        /// <summary>
+        /// Uses a timer - does not waste a thread.
+        /// </summary>
         public Task SleepAsyncB(int millisecondsTimeout)
         {
             TaskCompletionSource<bool> tcs = null;

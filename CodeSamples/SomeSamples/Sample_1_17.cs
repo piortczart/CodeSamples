@@ -3,6 +3,9 @@ using System.Threading.Tasks;
 
 namespace SomeSamples
 {
+    /// <summary>
+    /// Breaking from a Parallel loop.
+    /// </summary>
     public static class Sample_1_17
     {
         public static void Do()
@@ -18,7 +21,7 @@ namespace SomeSamples
                     return;
                 });
 
-            Console.WriteLine(result.IsCompleted + " " + result.LowestBreakIteration);
+            Console.WriteLine("Completed: {0}, breaked at: {1} ", result.IsCompleted, result.LowestBreakIteration);
 
             Console.ReadKey();
         }

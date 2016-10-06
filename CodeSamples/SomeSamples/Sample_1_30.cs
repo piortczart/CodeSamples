@@ -7,7 +7,7 @@ namespace SomeSamples
     {
         public static void Do()
         {
-            ConcurrentBag<int> bag = new ConcurrentBag<int> {42, 21};
+            var bag = new ConcurrentBag<int> {42, 21};
             int result;
             if (bag.TryTake(out result))
                 Console.WriteLine(result);

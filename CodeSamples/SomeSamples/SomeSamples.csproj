@@ -45,13 +45,18 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sample_1_14_b.cs" />
+    <Compile Include="Sample_1_29_b.cs" />
+    <Compile Include="Sample_1_31_b.cs" />
     <Compile Include="Sample_1_34.cs" />
     <Compile Include="Sample_1_33.cs" />
     <Compile Include="Sample_1_32.cs" />
-    <Compile Include="Sample_1_31.cs" />
+    <Compile Include="Sample_1_31_a.cs" />
     <Compile Include="Sample_1_30.cs" />
-    <Compile Include="Sample_1_29.cs" />
+    <Compile Include="Sample_1_29_a.cs" />
     <Compile Include="Sample_1_28.cs" />
+    <Compile Include="Sample_1_35_b.cs" />
+    <Compile Include="Sample_1_36_a.cs" />
     <Compile Include="Sample_1_45.cs" />
     <Compile Include="Sample_1_44.cs" />
     <Compile Include="Sample_1_43.cs" />
@@ -60,8 +65,8 @@
     <Compile Include="Sample_1_40.cs" />
     <Compile Include="Sample_1_39.cs" />
     <Compile Include="Sample_1_37.cs" />
-    <Compile Include="Sample_1_36.cs" />
-    <Compile Include="Sample_1_35.cs" />
+    <Compile Include="Sample_1_36_b.cs" />
+    <Compile Include="Sample_1_35_a.cs" />
     <Compile Include="Sample_1_27.cs" />
     <Compile Include="Sample_1_23.cs" />
     <Compile Include="Sample_1_22.cs" />
@@ -71,7 +76,7 @@
     <Compile Include="Sample_1_16.cs" />
     <Compile Include="Sample_1_01.cs" />
     <Compile Include="Sample_1_15.cs" />
-    <Compile Include="Sample_1_14.cs" />
+    <Compile Include="Sample_1_14_a.cs" />
     <Compile Include="Sample_1_13.cs" />
     <Compile Include="Sample_1_12.cs" />
     <Compile Include="Sample_1_11.cs" />
