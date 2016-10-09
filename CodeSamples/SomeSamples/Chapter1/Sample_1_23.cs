@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Linq;
 
-namespace SomeSamples
+namespace SomeSamples.Chapter1
 {
     public class Sample_1_23
     {
@@ -11,7 +11,7 @@ namespace SomeSamples
             var sw = Stopwatch.StartNew();
 
             var numbers = Enumerable.Range(0, 100);
-            int[] parallelResult = numbers.AsParallel().Where(i => i % 2 == 0).ToArray();
+            int[] parallelResult = numbers.AsParallel().Where(i => i%2 == 0).ToArray();
             foreach (int i in parallelResult)
             {
                 Console.WriteLine(i);
@@ -20,7 +20,7 @@ namespace SomeSamples
             Console.ReadKey();
 
             // Ordered.
-            parallelResult = numbers.AsParallel().AsOrdered().Where(i => i % 2 == 0).ToArray();
+            parallelResult = numbers.AsParallel().AsOrdered().Where(i => i%2 == 0).ToArray();
             foreach (int i in parallelResult)
             {
                 Console.WriteLine(i);

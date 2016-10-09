@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace SomeSamples
+namespace SomeSamples.Chapter1
 {
     public static class Sample_1_7
     {
@@ -17,8 +17,6 @@ namespace SomeSamples
                     Interlocked.Add(ref blabla, 1);
                 });
             }
-
-            Console.ReadKey();
         }
     }
 }

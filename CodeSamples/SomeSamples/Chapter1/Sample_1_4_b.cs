@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace SomeSamples
+namespace SomeSamples.Chapter1
 {
     public static class Sample_1_4_b
     {
@@ -13,7 +13,8 @@ namespace SomeSamples
             {
                 while (!stopped)
                 {
-                    Console.WriteLine("Running..."); Thread.Sleep(1000);
+                    Console.WriteLine("Running...");
+                    Thread.Sleep(1000);
                 }
             }));
             t.Start();

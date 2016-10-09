@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Linq;
 
-namespace SomeSamples
+namespace SomeSamples.Chapter1
 {
     public class Sample_1_22
     {
@@ -11,13 +11,13 @@ namespace SomeSamples
             var sw = Stopwatch.StartNew();
 
             var numbers = Enumerable.Range(0, 100000000);
-            int[] parallelResult = numbers.AsParallel().Where(i => i % 2 == 0).ToArray();
+            int[] parallelResult = numbers.AsParallel().Where(i => i%2 == 0).ToArray();
 
-            Console.WriteLine("PLINQ: {0}",  sw.Elapsed);
+            Console.WriteLine("PLINQ: {0}", sw.Elapsed);
 
             foreach (int i in parallelResult) Console.WriteLine(i);
 
-            int[] regularResult = numbers.Where(i => i % 2 == 0).ToArray();
+            int[] regularResult = numbers.Where(i => i%2 == 0).ToArray();
 
             Console.WriteLine("LINQ: {0}", sw.Elapsed);
             Console.ReadKey();

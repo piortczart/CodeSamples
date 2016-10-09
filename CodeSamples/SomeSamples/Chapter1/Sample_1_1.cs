@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace SomeSamples
+namespace SomeSamples.Chapter1
 {
     public static class Sample_1_1
     {

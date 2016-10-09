@@ -43,35 +43,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chapter2\Sample_2_1.cs" />
+    <Compile Include="Chapter2\Sample_2_10.cs" />
+    <Compile Include="Chapter2\Sample_2_12.cs" />
+    <Compile Include="Chapter2\Sample_2_18.cs" />
+    <Compile Include="Chapter2\Sample_2_2.cs" />
+    <Compile Include="Chapter2\Sample_2_24.cs" />
+    <Compile Include="Chapter2\Sample_2_29.cs" />
+    <Compile Include="Chapter2\Sample_2_7.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sample_1_27.cs" />
-    <Compile Include="Sample_1_23.cs" />
-    <Compile Include="Sample_1_22.cs" />
-    <Compile Include="Sample_1_19.cs" />
-    <Compile Include="Sample_1_18.cs" />
-    <Compile Include="Sample_1_17.cs" />
-    <Compile Include="Sample_1_16.cs" />
-    <Compile Include="Sample_1_1.cs" />
-    <Compile Include="Sample_1_15.cs" />
-    <Compile Include="Sample_1_14.cs" />
-    <Compile Include="Sample_1_13.cs" />
-    <Compile Include="Sample_1_12.cs" />
-    <Compile Include="Sample_1_11.cs" />
-    <Compile Include="Sample_1_10.cs" />
-    <Compile Include="Sample_1_9.cs" />
-    <Compile Include="Sample_1_8.cs" />
-    <Compile Include="Sample_1_7.cs" />
-    <Compile Include="Sample_1_6.cs" />
-    <Compile Include="Sample_1_5.cs" />
-    <Compile Include="Sample_1_4_b.cs" />
-    <Compile Include="Sample_1_4_a.cs" />
-    <Compile Include="Sample_1_3.cs" />
-    <Compile Include="Sample_1_2.cs" />
+    <Compile Include="Chapter1\Sample_1_27.cs" />
+    <Compile Include="Chapter1\Sample_1_23.cs" />
+    <Compile Include="Chapter1\Sample_1_22.cs" />
+    <Compile Include="Chapter1\Sample_1_19.cs" />
+    <Compile Include="Chapter1\Sample_1_18.cs" />
+    <Compile Include="Chapter1\Sample_1_17.cs" />
+    <Compile Include="Chapter1\Sample_1_16.cs" />
+    <Compile Include="Chapter1\Sample_1_1.cs" />
+    <Compile Include="Chapter1\Sample_1_15.cs" />
+    <Compile Include="Chapter1\Sample_1_14.cs" />
+    <Compile Include="Chapter1\Sample_1_13.cs" />
+    <Compile Include="Chapter1\Sample_1_12.cs" />
+    <Compile Include="Chapter1\Sample_1_11.cs" />
+    <Compile Include="Chapter1\Sample_1_10.cs" />
+    <Compile Include="Chapter1\Sample_1_9.cs" />
+    <Compile Include="Chapter1\Sample_1_8.cs" />
+    <Compile Include="Chapter1\Sample_1_7.cs" />
+    <Compile Include="Chapter1\Sample_1_6.cs" />
+    <Compile Include="Chapter1\Sample_1_5.cs" />
+    <Compile Include="Chapter1\Sample_1_4_b.cs" />
+    <Compile Include="Chapter1\Sample_1_4_a.cs" />
+    <Compile Include="Chapter1\Sample_1_3.cs" />
+    <Compile Include="Chapter1\Sample_1_2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

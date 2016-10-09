@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Linq;
-using System.Threading;
 using System.Threading.Tasks;
 
-namespace SomeSamples
+namespace SomeSamples.Chapter1
 {
     public static class Sample_1_13
     {
@@ -13,7 +11,8 @@ namespace SomeSamples
             {
                 var results = new int[3];
 
-                TaskFactory tf = new TaskFactory(TaskCreationOptions.AttachedToParent, TaskContinuationOptions.ExecuteSynchronously);
+                TaskFactory tf = new TaskFactory(TaskCreationOptions.AttachedToParent,
+                    TaskContinuationOptions.ExecuteSynchronously);
 
                 tf.StartNew(() => results[0] = 0, TaskCreationOptions.AttachedToParent);
                 tf.StartNew(() => results[1] = 1, TaskCreationOptions.AttachedToParent);

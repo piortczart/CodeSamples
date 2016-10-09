@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SomeSamples
+namespace SomeSamples.Chapter1
 {
     public static class Sample_1_10
     {
@@ -18,10 +18,7 @@ namespace SomeSamples
                 }
                 Console.WriteLine("");
                 return 1;
-            }).ContinueWith((i) =>
-            {
-                return i.Result + 5;
-            });
+            }).ContinueWith((i) => { return i.Result + 5; });
 
             Console.WriteLine("Result: " + t.Result);
 

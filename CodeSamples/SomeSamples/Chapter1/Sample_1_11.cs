@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SomeSamples
+namespace SomeSamples.Chapter1
 {
     public static class Sample_1_11
     {
@@ -15,16 +15,13 @@ namespace SomeSamples
                 {
                     Console.Write("*");
                     Thread.Sleep(TimeSpan.FromMilliseconds(10));
-                   // throw new Exception();
+                    // throw new Exception();
                 }
                 Console.WriteLine("");
                 return 1;
             });
 
-            t.ContinueWith((i) =>
-            {
-                return i.Result + 1;
-            }, TaskContinuationOptions.OnlyOnRanToCompletion);
+            t.ContinueWith((i) => { return i.Result + 1; }, TaskContinuationOptions.OnlyOnRanToCompletion);
 
             t.ContinueWith((i) =>
             {

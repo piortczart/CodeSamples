@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Threading;
 
-namespace SomeSamples
+namespace SomeSamples.Chapter1
 {
-    public static class Sample_1_6
+    public static class Sample_1_5
     {
-        public static ThreadLocal<int> _field =
-            new ThreadLocal<int>(() => { return Thread.CurrentThread.ManagedThreadId; });
+        [ThreadStatic] public static int Number;
 
         public static void Do()
         {
@@ -14,7 +13,9 @@ namespace SomeSamples
             {
                 for (int x = 0; x < 10; x++)
                 {
-                    Console.WriteLine("ThreadA: {0}", _field);
+                    //Interlocked.Add(ref Number, 1);
+                    Number++;
+                    Console.WriteLine("ThreadA: {0}", Number);
                 }
             }).Start();
 
@@ -22,7 +23,8 @@ namespace SomeSamples
             {
                 for (int x = 0; x < 10; x++)
                 {
-                    Console.WriteLine("ThreadB: {0}", _field);
+                    Number++;
+                    Console.WriteLine("ThreadB: {0}", Number);
                 }
             }).Start();
 
