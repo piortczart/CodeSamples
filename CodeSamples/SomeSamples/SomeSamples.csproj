@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,6 +51,12 @@
     <Compile Include="Chapter2\Sample_2_2.cs" />
     <Compile Include="Chapter2\Sample_2_24.cs" />
     <Compile Include="Chapter2\Sample_2_29.cs" />
+    <Compile Include="Chapter2\Sample_2_31.cs" />
+    <Compile Include="Chapter2\Sample_2_35.cs" />
+    <Compile Include="Chapter2\Sample_2_38.cs" />
+    <Compile Include="Chapter2\Sample_2_42.cs" />
+    <Compile Include="Chapter2\Sample_2_54.cs" />
+    <Compile Include="Chapter2\Sample_2_56.cs" />
     <Compile Include="Chapter2\Sample_2_7.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

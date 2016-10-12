@@ -2,7 +2,7 @@
 using System.Collections.Concurrent;
 using System.Threading.Tasks;
 
-namespace SomeSamples
+namespace SomeSamples.Chapter1
 {
     /// <summary>
     /// A BlockingCollection example.

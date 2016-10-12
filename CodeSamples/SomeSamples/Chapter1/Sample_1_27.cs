@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Linq;
 
-namespace SomeSamples
+namespace SomeSamples.Chapter1
 {
     /// <summary>
     /// PLinq - AggregateException.
@@ -31,8 +31,11 @@ namespace SomeSamples
 
         private static bool IsEven(int i)
         {
-            if (i % 10 == 0) { throw new ArgumentException("i"); }
-            return i % 2 == 0;
+            if (i%10 == 0)
+            {
+                throw new ArgumentException("i");
+            }
+            return i%2 == 0;
         }
     }
 }

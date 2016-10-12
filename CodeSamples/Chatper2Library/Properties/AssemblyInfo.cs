@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("SomeSamples")]
+[assembly: AssemblyTitle("Chatper2Library")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SomeSamples")]
+[assembly: AssemblyProduct("Chatper2Library")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -23,7 +23,7 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 
-[assembly: Guid("8b135227-263d-4f2f-bd61-fc42f90fd1f1")]
+[assembly: Guid("5c4e6ffa-d9a3-4f56-b873-2bf03cb33f02")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -38,4 +38,3 @@ using System.Runtime.InteropServices;
 
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
-[assembly: InternalsVisibleTo("Chatper2Library")]

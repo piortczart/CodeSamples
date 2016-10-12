@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Linq;
 
-namespace SomeSamples
+namespace SomeSamples.Chapter1
 {
     /// <summary>
     /// PLinq - order is not enforced by default.
@@ -15,7 +15,7 @@ namespace SomeSamples
 
             Console.WriteLine("Unordered...");
             var numbers = Enumerable.Range(0, 20);
-            int[] parallelResult = numbers.AsParallel().Where(i => i % 2 == 0).ToArray();
+            int[] parallelResult = numbers.AsParallel().Where(i => i%2 == 0).ToArray();
             foreach (int i in parallelResult)
             {
                 Console.WriteLine(i);
@@ -24,7 +24,7 @@ namespace SomeSamples
             Console.ReadKey();
 
             Console.WriteLine("Oooooorder!");
-            parallelResult = numbers.AsParallel().AsOrdered().Where(i => i % 2 == 0).ToArray();
+            parallelResult = numbers.AsParallel().AsOrdered().Where(i => i%2 == 0).ToArray();
             foreach (int i in parallelResult)
             {
                 Console.WriteLine(i);

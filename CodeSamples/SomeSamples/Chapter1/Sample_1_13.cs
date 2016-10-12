@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SomeSamples
+namespace SomeSamples.Chapter1
 {
     /// <summary>
     /// Factory with options.
@@ -13,12 +13,13 @@ namespace SomeSamples
         public static void Do()
         {
             Task<int[]> parent = Task.Factory.StartNew(() =>
-            //Task <int[]> parent = Task.Run(() =>
+                //Task <int[]> parent = Task.Run(() =>
             {
                 Console.WriteLine("Started the parent. Id: {0}", Thread.CurrentThread.ManagedThreadId);
 
                 // All tasks created by this factory will attach to the parent.
-                TaskFactory factory = new TaskFactory(TaskCreationOptions.AttachedToParent, TaskContinuationOptions.ExecuteSynchronously);
+                TaskFactory factory = new TaskFactory(TaskCreationOptions.AttachedToParent,
+                    TaskContinuationOptions.ExecuteSynchronously);
 
                 var results = new int[3];
                 factory.StartNew(() => results[0] = -1, TaskCreationOptions.AttachedToParent);
@@ -29,7 +30,11 @@ namespace SomeSamples
                     Thread.Sleep(1000);
                     results[1] = 1;
                 }, TaskCreationOptions.AttachedToParent)
-                .ContinueWith(t => { Console.WriteLine("The slow child is done. Id: {0}", Thread.CurrentThread.ManagedThreadId); });
+                    .ContinueWith(
+                        t =>
+                        {
+                            Console.WriteLine("The slow child is done. Id: {0}", Thread.CurrentThread.ManagedThreadId);
+                        });
                 factory.StartNew(() => results[2] = 2, TaskCreationOptions.AttachedToParent);
                 return results;
             });

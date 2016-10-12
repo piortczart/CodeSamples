@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SomeSamples
+namespace SomeSamples.Chapter1
 {
     /// <summary>
     /// Analyze the results of many tasks from an array.
@@ -18,9 +18,24 @@ namespace SomeSamples
             var stopwatch = Stopwatch.StartNew();
 
             var tasks = new Task<int>[3];
-            tasks[0] = Task.Run(() => { Thread.Sleep(3000); Console.WriteLine("Finished: 0"); return 0; });
-            tasks[1] = Task.Run(() => { Thread.Sleep(1500); Console.WriteLine("Finished: 1"); return 1; });
-            tasks[2] = Task.Run(() => { Thread.Sleep(5000); Console.WriteLine("Finished: 2"); return 2; });
+            tasks[0] = Task.Run(() =>
+            {
+                Thread.Sleep(3000);
+                Console.WriteLine("Finished: 0");
+                return 0;
+            });
+            tasks[1] = Task.Run(() =>
+            {
+                Thread.Sleep(1500);
+                Console.WriteLine("Finished: 1");
+                return 1;
+            });
+            tasks[2] = Task.Run(() =>
+            {
+                Thread.Sleep(5000);
+                Console.WriteLine("Finished: 2");
+                return 2;
+            });
 
             while (tasks.Length > 0)
             {

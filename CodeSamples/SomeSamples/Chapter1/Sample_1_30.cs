@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 
-namespace SomeSamples
+namespace SomeSamples.Chapter1
 {
     public class Sample_1_30
     {

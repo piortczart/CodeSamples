@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SomeSamples
+namespace SomeSamples.Chapter1
 {
     public static class Sample_1_10
     {
@@ -19,7 +19,8 @@ namespace SomeSamples
                     Console.Write("*");
                     Thread.Sleep(TimeSpan.FromMilliseconds(100));
                 }
-                Console.WriteLine("{1}First task part thread ID: {0}", Thread.CurrentThread.ManagedThreadId, Environment.NewLine);
+                Console.WriteLine("{1}First task part thread ID: {0}", Thread.CurrentThread.ManagedThreadId,
+                    Environment.NewLine);
                 return 1;
             }).ContinueWith((i) =>
             {

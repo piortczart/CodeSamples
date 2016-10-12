@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 
-namespace SomeSamples
+namespace SomeSamples.Chapter1
 {
     /// <summary>
     /// ConcurrentStack - a non-blocking FILO
@@ -24,7 +24,7 @@ namespace SomeSamples
 
             Console.ReadKey();
 
-            var toPush = new[] { 1, 2 };
+            var toPush = new[] {1, 2};
             Console.WriteLine("Pushing items: {0}", String.Join(",", toPush));
             stack.PushRange(toPush);
             Console.WriteLine("Pushing an extra item: 3");

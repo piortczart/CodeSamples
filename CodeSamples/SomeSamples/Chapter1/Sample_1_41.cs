@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SomeSamples
+namespace SomeSamples.Chapter1
 {
     /// <summary>
     /// Making decisions based on a value shared by two threads...
@@ -23,10 +23,7 @@ namespace SomeSamples
                 }
             });
 
-            Task t2 = Task.Run(() =>
-            {
-                value = 3;
-            });
+            Task t2 = Task.Run(() => { value = 3; });
 
             Task.WaitAll(t1, t2);
             Console.WriteLine(value); // Displays 2

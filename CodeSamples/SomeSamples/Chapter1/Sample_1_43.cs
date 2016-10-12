@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SomeSamples
+namespace SomeSamples.Chapter1
 {
     public class Sample_1_43
     {
@@ -26,7 +26,7 @@ namespace SomeSamples
             cancellationTokenSource.Cancel();
 
             Console.WriteLine("Waiting...");
-            task.Wait();    // Excepszyn here.
+            task.Wait(); // Excepszyn here.
 
             Console.WriteLine("Uff...");
             Console.ReadKey();

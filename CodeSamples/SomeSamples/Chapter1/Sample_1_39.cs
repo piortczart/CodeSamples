@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SomeSamples
+namespace SomeSamples.Chapter1
 {
     /// <summary>
     /// SKIP!
@@ -15,6 +15,7 @@ namespace SomeSamples
             _value = 5;
             _flag = 1;
         }
+
         public static void Thread2()
         {
             if (_flag == 1)

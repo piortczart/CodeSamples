@@ -2,7 +2,7 @@
 using System.Collections.Concurrent;
 using System.Threading.Tasks;
 
-namespace SomeSamples
+namespace SomeSamples.Chapter1
 {
     /// <summary>
     /// BlockingCollection - CompleteAdding makes sure nothing can be added anymore.
@@ -27,7 +27,8 @@ namespace SomeSamples
                 while (true)
                 {
                     string input = Console.ReadLine();
-                    if (string.IsNullOrWhiteSpace(input)) {
+                    if (string.IsNullOrWhiteSpace(input))
+                    {
                         break;
                     }
                     if (input == "magic")

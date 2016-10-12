@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Threading;
 
-namespace SomeSamples
+namespace SomeSamples.Chapter1
 {
     public static class Sample_1_05
     {
-        [ThreadStatic]
-        public static int Number;
+        [ThreadStatic] public static int Number;
 
         public static void Do()
         {

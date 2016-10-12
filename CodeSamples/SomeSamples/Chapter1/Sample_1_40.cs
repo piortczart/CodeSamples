@@ -2,16 +2,15 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SomeSamples
+namespace SomeSamples.Chapter1
 {
     /// <summary>
     /// SKIP!
     /// </summary>
-     public class Sample_1_40
+    public class Sample_1_40
     {
         public static void Do()
         {
-
             int n = 0;
             var up = Task.Run(() =>
             {

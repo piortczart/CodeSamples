@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Linq;
 
-namespace SomeSamples
+namespace SomeSamples.Chapter1
 {
     /// <summary>
     /// Parallel Linq Vs Linq.
@@ -15,14 +15,14 @@ namespace SomeSamples
             var sw = Stopwatch.StartNew();
 
             Func<int, long> goodOne = FindPrimeNumber;
-            Func<int, long> badOne = i => { return i % 2; };
+            Func<int, long> badOne = i => { return i%2; };
 
             Func<int, long> calculation = badOne; // CHANGE HERE.
 
             var numbers = Enumerable.Range(0, 4000);
             numbers.AsParallel().Select(calculation).ToArray();
 
-            Console.WriteLine("PLINQ: {0}",  sw.Elapsed);
+            Console.WriteLine("PLINQ: {0}", sw.Elapsed);
 
             sw.Restart();
 
@@ -42,10 +42,10 @@ namespace SomeSamples
             while (count < n)
             {
                 long b = 2;
-                int prime = 1;// to check if found a prime
-                while (b * b <= a)
+                int prime = 1; // to check if found a prime
+                while (b*b <= a)
                 {
-                    if (a % b == 0)
+                    if (a%b == 0)
                     {
                         prime = 0;
                         break;
