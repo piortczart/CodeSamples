@@ -1,4 +1,7 @@
-﻿namespace SomeSamples
+﻿using System;
+using SomeSamples.Chapter2;
+
+namespace SomeSamples
 {
     class Program
     {
@@ -33,7 +36,23 @@
             //Sample_1_42.Do();
             //Sample_1_43.Do();
             //Sample_1_44.Do();
-            Sample_1_45.Do();
+            //Sample_1_45.Do();
+
+            //Sample_2_1.Do();
+            //Sample_2_2.Do();
+            //Sample_2_7.Do();
+            //Sample_2_10.Do();
+            //Sample_2_12.Do();
+            //Sample_2_18.Do();
+            //Sample_2_24.Do();
+            //Sample_2_29.Do();
+            //Sample_2_31.Do();
+            //Sample_2_38.Do();
+            //Sample_2_42.Do();
+            //Sample_2_54.Do();
+            Sample_2_56.Do();
+
+            Console.ReadKey();
         }
     }
 }
