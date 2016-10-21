@@ -65,7 +65,6 @@
     <Compile Include="Sample_1_40.cs" />
     <Compile Include="Sample_1_39.cs" />
     <Compile Include="Sample_1_37.cs" />
-    <Compile Include="Sample_1_36_b.cs" />
     <Compile Include="Sample_1_35_a.cs" />
     <Compile Include="Sample_1_27.cs" />
     <Compile Include="Sample_1_23.cs" />
@@ -90,6 +89,7 @@
     <Compile Include="Sample_1_04_a.cs" />
     <Compile Include="Sample_1_03.cs" />
     <Compile Include="Sample_1_02.cs" />
+    <Compile Include="Sample_1_99.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

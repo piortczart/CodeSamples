@@ -13,7 +13,7 @@ namespace SomeSamples
         public static void Do()
         {
             Task<int[]> parent = Task.Factory.StartNew(() =>
-            //Task <int[]> parent = Task.Run(() =>
+                //Task <int[]> parent = Task.Run(() =>
             {
                 Console.WriteLine("Started the parent. Id: {0}", Thread.CurrentThread.ManagedThreadId);
 
@@ -26,7 +26,11 @@ namespace SomeSamples
                     Thread.Sleep(1000);
                     results[1] = 1;
                 }, TaskCreationOptions.AttachedToParent)
-                .ContinueWith(t => { Console.WriteLine("The slow child is done. Id: {0}", Thread.CurrentThread.ManagedThreadId); });
+                    .ContinueWith(
+                        t =>
+                        {
+                            Console.WriteLine("The slow child is done. Id: {0}", Thread.CurrentThread.ManagedThreadId);
+                        });
                 new Task(() => results[2] = 2, TaskCreationOptions.AttachedToParent).Start();
                 return results;
             });

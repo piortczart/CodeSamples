@@ -36,13 +36,13 @@ namespace SomeSamples
 
             dict["k1"] = 42; // Overwrite unconditionally
 
-            int r0 = dict.AddOrUpdate("k0", 400, (s, i) => i * 2);
+            int r0 = dict.AddOrUpdate("k0", 400, (s, i) => i*2);
             Console.WriteLine("[k0]: AddOrUpdate0: " + r0);
 
             Console.ReadKey();
 
             // Will use the function to update the value.
-            int r1 = dict.AddOrUpdate("k1", 3, (s, i) => i * 2);
+            int r1 = dict.AddOrUpdate("k1", 3, (s, i) => i*2);
             Console.WriteLine("[k1]: AddOrUpdate1: " + r1);
 
             Console.ReadKey();

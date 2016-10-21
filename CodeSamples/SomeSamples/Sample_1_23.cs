@@ -14,8 +14,8 @@ namespace SomeSamples
             var sw = Stopwatch.StartNew();
 
             Console.WriteLine("Unordered...");
-            var numbers = Enumerable.Range(0, 20);
-            int[] parallelResult = numbers.AsParallel().Where(i => i % 2 == 0).ToArray();
+            var numbers = Enumerable.Range(0, 20).ToList();
+            int[] parallelResult = numbers.AsParallel().Where(i => i%2 == 0).ToArray();
             foreach (int i in parallelResult)
             {
                 Console.WriteLine(i);
@@ -24,7 +24,7 @@ namespace SomeSamples
             Console.ReadKey();
 
             Console.WriteLine("Oooooorder!");
-            parallelResult = numbers.AsParallel().AsOrdered().Where(i => i % 2 == 0).ToArray();
+            parallelResult = numbers.AsParallel().AsOrdered().Where(i => i%2 == 0).ToArray();
             foreach (int i in parallelResult)
             {
                 Console.WriteLine(i);

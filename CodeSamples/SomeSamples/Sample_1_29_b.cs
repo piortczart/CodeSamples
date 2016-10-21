@@ -20,7 +20,7 @@ namespace SomeSamples
             // Readin task...
             Task read = Task.Run(async () =>
             {
-                //foreach (string v in collection)    // THIS WILL NOT CONSUME!
+                //foreach (string v in collection) // THIS WILL NOT CONSUME!
                 foreach (string v in collection.GetConsumingEnumerable())
                 {
                     Console.WriteLine("Read: {0}, count after read: {1}", v, collection.Count);
