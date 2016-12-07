@@ -1,5 +1,6 @@
 ﻿using System;
 using SomeSamples.Chapter2;
+using SomeSamples.Chapter3;
 
 namespace SomeSamples
 {
@@ -7,6 +8,15 @@ namespace SomeSamples
     {
         static void Main(string[] args)
         {
+            //Sample_3_17.Do();
+            //Sample_3_18.Do();
+            //Sample_3_19.Do();
+            //Sample_3_20.Do();
+            //Sample_3_21.Do();
+            //Sample_3_22.Do();
+            Sample_3_23.Do();
+
+
             //Sample_1_10.Do();
             //Sample_1_11.Do();
             //Sample_1_12.Do();
@@ -50,7 +60,7 @@ namespace SomeSamples
             //Sample_2_38.Do();
             //Sample_2_42.Do();
             //Sample_2_54.Do();
-            Sample_2_56.Do();
+            //Sample_2_56.Do();
 
             Console.ReadKey();
         }

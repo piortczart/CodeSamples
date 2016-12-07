@@ -102,6 +102,13 @@
     <Compile Include="Chapter2\Sample_2_54.cs" />
     <Compile Include="Chapter2\Sample_2_56.cs" />
     <Compile Include="Chapter2\Sample_2_7.cs" />
+    <Compile Include="Chapter3\Sample_3_17.cs" />
+    <Compile Include="Chapter3\Sample_3_20.cs" />
+    <Compile Include="Chapter3\Sample_3_19.cs" />
+    <Compile Include="Chapter3\Sample_3_18.cs" />
+    <Compile Include="Chapter3\Sample_3_21.cs" />
+    <Compile Include="Chapter3\Sample_3_22.cs" />
+    <Compile Include="Chapter3\Sample_3_23.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Chapter1\Sample_1_99.cs" />
