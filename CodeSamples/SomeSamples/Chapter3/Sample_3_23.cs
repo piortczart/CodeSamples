@@ -18,11 +18,11 @@ namespace SomeSamples.Chapter3
             Console.WriteLine(Convert.ToBase64String(hashA));
             data = "A paragraph of text?";
             byte[] hashB = sha256.ComputeHash(byteConverter.GetBytes(data));
-            data = "A paragraph of text";
+            data = "A paragraph of text!";
             Console.WriteLine(Convert.ToBase64String(hashB));
             Console.ReadLine();
             byte[] hashC = sha256.ComputeHash(byteConverter.GetBytes(data));
-            Console.WriteLine(Convert.ToBase64String(hashB));
+            Console.WriteLine(Convert.ToBase64String(hashC));
 
             Console.WriteLine(hashA.SequenceEqual(hashB)); // First not euqal to second.
             Console.WriteLine(hashA.SequenceEqual(hashC)); // First equal to last.
